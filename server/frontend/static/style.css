@@ -4,7 +4,8 @@ img{
 }
 
 .card{
-  border: rgb(103, 102, 105) 3px solid;
+  /* border: rgb(103, 102, 105) 3px solid; */
+  border: none;
   display: flex;  
   flex-direction: column;
   margin-left:5%;
@@ -34,11 +35,16 @@ img{
 
 .title{
   font-size: 20px;
-  background-color: rgb(97, 64, 128);
+  background-color: #0C9;
   color: white;
   text-align: center;
-  margin:20px;
+  margin: 1rem;
   padding:5px;
+}
+
+.logo-title {
+    display: flex;
+    text-align: center;
 }
 
 .homepage_links{
@@ -67,12 +73,18 @@ img{
   flex-direction: column;
   border-radius: 50px;
   text-align:center;
-  box-shadow: 2px 2px 2px 3px #999;
+  /* box-shadow: 2px 2px 2px 3px #999; */
   margin: auto;
   min-width: 350px;
   width: 80%;
   margin-top:3%;
   background-color: black;
+}
+
+.navbar {
+    /* background-color:darkturquoise; */
+    background-color: #0C9;
+    height: 5rem;
 }
 
 .navitems{
@@ -90,6 +102,7 @@ img{
   color: black;
   align-self: center;
 }
+
 
 .username{
   font: 30px sans-serif;
@@ -123,4 +136,15 @@ img{
     border-radius:50px;
     text-align:center;
     box-shadow: 2px 2px 3px #999;  
+}
+
+.about-text {
+    padding: 1rem;
+    text-align: center;    
+}
+
+.btn-home {
+    padding: 1rem;
+    background-color:#0C9 !important;
+    color:#FFF !important;
 }
