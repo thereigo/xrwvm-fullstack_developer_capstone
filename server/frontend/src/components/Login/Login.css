@@ -37,10 +37,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
-.input_field{
-  
+.input_field_login {
   font-size: medium;
   margin: 1rem 0.5rem;
 }
