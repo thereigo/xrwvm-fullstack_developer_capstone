@@ -88,7 +88,7 @@ def get_cars(request):
         cars.append({"CarModel": car_model.name, "CarMake": car_model.car_make.name})
     return JsonResponse({"CarModels":cars})
 
-
+#
 
 # # Update the `get_dealerships` view to render the index page with
 # a list of dealerships
