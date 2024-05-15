@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import "./Dealers.css";
+import "./PostReview.css"
+// import "./Dealers.css";
 import "../assets/style.css";
 import Header from '../Header/Header';
 
@@ -93,30 +94,32 @@ const PostReview = () => {
   return (
     <div>
       <Header/>
-      <div  style={{margin:"5%"}}>
-      <h1 style={{color:"black"}}>{dealer.full_name}</h1>
-      <textarea id='review' cols='50' rows='7' onChange={(e) => setReview(e.target.value)}></textarea>
-      <div className='input_field'>
-      Purchase Date <input type="date" onChange={(e) => setDate(e.target.value)}/>
-      </div>
-      <div className='input_field'>
-      Car Make 
-      <select name="cars" id="cars" onChange={(e) => setModel(e.target.value)}>
-      <option value="" selected disabled hidden>Choose Car Make and Model</option>
-      {carmodels.map(carmodel => (
-          <option value={carmodel.CarMake+" "+carmodel.CarModel}>{carmodel.CarMake} {carmodel.CarModel}</option>
-      ))}
-      </select>        
-      </div >
+      <div className='container'>
+        <div  className="review-form" >
+            <h1 className="review-title">{dealer.full_name}</h1>
+            <textarea className="textarea" id='review' cols='50' rows='7' onChange={(e) => setReview(e.target.value)}></textarea>
+        <div className='input_field_review'>
+        Purchase Date <input className="input-text" type="date" onChange={(e) => setDate(e.target.value)}/>
+        </div>
+        <div className='input_field_review'>
+        Car Make 
+        <select className="select-text" name="cars" id="cars" onChange={(e) => setModel(e.target.value)}>
+        <option value="" selected disabled hidden>Choose Car Make and Model</option>
+        {carmodels.map(carmodel => (
+            <option value={carmodel.CarMake+" "+carmodel.CarModel}>{carmodel.CarMake} {carmodel.CarModel}</option>
+        ))}
+        </select>        
+        </div >
 
-      <div className='input_field'>
-      Car Year <input type="int" onChange={(e) => setYear(e.target.value)} max={2023} min={2015}/>
-      </div>
+        <div className='input_field_review'>
+        Car Year <input className="input-text" type="int" onChange={(e) => setYear(e.target.value)} max={2023} min={2015}/>
+        </div>
 
-      <div>
-      <button className='postreview' onClick={postreview}>Post Review</button>
+        <div>
+        <button className='postreview btn-review' onClick={postreview}>Post Review</button>
+        </div>
+        </div>
       </div>
-    </div>
     </div>
   )
 }
